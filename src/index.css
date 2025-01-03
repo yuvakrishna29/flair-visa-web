@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-sans bg-bg_color overflow-x-hidden w-screen h-screen;
+}
+
+@layer components {
+  .btn_outline {
+    @apply px-3 py-1.5 border border-[1.5px] rounded-full border-primary_color flex items-center gap-2 text-sm font-semibold hover:bg-primary_color hover:text-white transition-all duration-500;
+  }
+
+  .btn_outline_circle {
+    @apply h-8 w-8 bg-primary_color text-white rounded-full flex items-center justify-center;
+  }
+
+  .custom_container {
+    @apply lg:px-9 xl:px-28 w-screen;
+  }
+}
+
+/* Optional: To hide the scrollbar */
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  /* for IE and Edge */
+  scrollbar-width: none;
+  /* for Firefox */
+}
+
+/* Add this in your global styles if needed */
+.map-container {
+  height: 400px;
+  /* You can adjust the height here */
+  width: 100%;
+  /* Full width */
+}
